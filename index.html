@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Make a little corner of the internet for someone who matters. Create and share a personal greeting site in minutes.">
+  <meta name="theme-color" content="#f8f3eb">
+  <title>Dearly make it mean something</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link id="site-icon" rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%23c55763'/%3E%3Ctext x='17' y='46' font-family='Georgia' font-size='44' fill='%23fff6eb'%3Ed%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="builder-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Dearly home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 25s-10-5.8-10-13a5.7 5.7 0 0 1 10-3.7A5.7 5.7 0 0 1 26 12c0 7.2-10 13-10 13Z" fill="currentColor"/></svg></span><span>dearly</span></a>
+    <div class="topbar-note"><span class="live-dot"></span> a small thing, made personal</div>
+  </header>
+
+  <main class="builder-shell">
+    <section class="intro-row">
+      <div>
+        <p class="eyebrow">THE INTERNET, WITH A LITTLE HEART</p>
+        <h1>Make someone feel<br><em>really seen.</em></h1>
+      </div>
+      <p class="intro-copy">A note is lovely. A whole little world, made just for them? Even better. Write yours, pick a mood, and send it across the internet.</p>
+    </section>
+
+    <div class="builder-grid">
+      <form class="editor-card" id="card-form">
+        <div class="editor-heading"><div><span class="step-label">01 / YOUR NOTE</span><h2>Put it into words</h2></div><span class="sparkle">✳</span></div>
+        <label class="field-label" for="occasion">This is for...</label>
+        <div class="occasion-picker" role="group" aria-label="Choose an occasion">
+          <button type="button" class="occasion-option active" data-occasion="appreciation"><span>♡</span> appreciation</button>
+          <button type="button" class="occasion-option" data-occasion="birthday"><span>✹</span> birthday</button>
+          <button type="button" class="occasion-option" data-occasion="love"><span>♥</span> love</button>
+          <button type="button" class="occasion-option" data-occasion="congratulations"><span>✦</span> big news</button>
+        </div>
+        <input type="hidden" id="occasion" value="appreciation">
+
+        <div class="field-pair">
+          <div class="field-wrap"><label class="field-label" for="recipient">Their name</label><input id="recipient" maxlength="48" value="Maya" autocomplete="off" required></div>
+          <div class="field-wrap"><label class="field-label" for="sender">Your name</label><input id="sender" maxlength="48" value="Sam" autocomplete="off" required></div>
+        </div>
+        <label class="field-label" for="headline">The big line</label>
+        <input id="headline" maxlength="90" value="You make ordinary days feel golden." required>
+        <label class="field-label" for="message">A few words from you</label>
+        <textarea id="message" rows="5" maxlength="900" required>Thank you for showing up with your whole heart. You make people feel welcome, you notice the little things, and somehow you always know how to make a hard day lighter. I hope this reminds you how much good you bring into the world.</textarea>
+        <div class="field-foot"><span>Keep it yours. A few honest lines go a long way.</span><span id="char-count">0 / 900</span></div>
+        <label class="field-label" for="photo">A photo link <span class="optional">OPTIONAL</span></label>
+        <div class="input-with-icon"><span aria-hidden="true">↗</span><input id="photo" type="url" placeholder="https://..." autocomplete="url"></div>
+        <p class="field-hint">Use a publicly viewable image URL. It stays in the link, not on a server.</p>
+
+        <div class="editor-heading theme-heading"><div><span class="step-label">02 / THE FEELING</span><h2>Pick their kind of pretty</h2></div></div>
+        <div class="theme-picker" role="group" aria-label="Choose a visual theme">
+          <button type="button" class="theme-option active" data-theme="rose"><span class="theme-swatch swatch-rose"></span><span><b>Rosewater</b><small>blush · handwritten</small></span><i>↗</i></button>
+          <button type="button" class="theme-option" data-theme="sunset"><span class="theme-swatch swatch-sunset"></span><span><b>Marigold</b><small>amber · editorial</small></span><i>↗</i></button>
+          <button type="button" class="theme-option" data-theme="midnight"><span class="theme-swatch swatch-midnight"></span><span><b>Ink &amp; Ivy</b><small>evergreen · refined</small></span><i>↗</i></button>
+          <button type="button" class="theme-option" data-theme="pastel"><span class="theme-swatch swatch-pastel"></span><span><b>Daydream</b><small>lilac · playful</small></span><i>↗</i></button>
+          <button type="button" class="theme-option" data-theme="matcha"><span class="theme-swatch swatch-matcha"></span><span><b>Matcha Club</b><small>sage · modern</small></span><i>↗</i></button>
+          <button type="button" class="theme-option" data-theme="blue"><span class="theme-swatch swatch-blue"></span><span><b>Blue Hour</b><small>cobalt · poetic</small></span><i>↗</i></button>
+        </div>
+        <button class="create-button" type="submit"><span>Make their little world</span><b aria-hidden="true">↗</b></button>
+        <p class="privacy-note"><span>✳</span> Nothing is uploaded. Your message travels inside its own share link.</p>
+        <div class="share-result" id="share-result" hidden aria-live="polite">
+          <div class="share-result-copy"><span class="step-label">YOUR LINK IS READY</span><strong>Made with love. Sent with a link.</strong></div>
+          <div class="share-link-row"><input id="share-link" readonly aria-label="Generated share link"><button id="copy-link" type="button">Copy link</button></div>
+          <a id="open-link" class="open-link" href="view.html">Preview the whole thing ↗</a>
+          <span class="copy-status" id="copy-status" role="status"></span>
+        </div>
+      </form>
+
+      <aside class="preview-column">
+        <div class="preview-topline"><span>THE LITTLE PREVIEW</span><span class="preview-live"><i></i> LIVE</span></div>
+        <div class="preview-frame" id="preview" data-theme="rose">
+          <div class="preview-deco deco-one">✦</div><div class="preview-deco deco-two">♡</div><div class="preview-deco deco-three">✳</div>
+          <div class="preview-content">
+            <span class="preview-kicker" id="preview-kicker">A LITTLE NOTE FOR YOU</span>
+            <span class="preview-flower" id="preview-flower">❀</span>
+            <p class="preview-for">FOR <span id="preview-recipient">MAYA</span></p>
+            <h2 id="preview-headline">You make ordinary days feel golden.</h2>
+            <p class="preview-message" id="preview-message">Thank you for showing up with your whole heart. You make people feel welcome, you notice the little things, and somehow you always know how to make a hard day lighter.</p>
+            <div class="preview-signoff"><span>with love,</span><b id="preview-sender">Sam</b></div>
+            <span class="preview-stamp">MADE JUST FOR YOU <i>♡</i></span>
+          </div>
+          <div class="preview-photo" id="preview-photo" hidden><img id="preview-photo-image" alt="Your selected photo preview"></div>
+        </div>
+        <div class="preview-caption"><span>↳</span> their first look, before the surprise opens</div>
+        <div class="mini-note"><span class="mini-note-icon">✎</span><p>It opens like a little gift, then unfolds into a letter they can keep coming back to.</p></div>
+      </aside>
+    </div>
+    <footer class="page-footer"><span class="page-footer-brand">♥ DEARLY</span><span> made for the people who make life lovely</span><a href="404.html">lost?</a></footer>
+  </main>
+  <script src="builder.js" defer></script>
+</body>
+</html>

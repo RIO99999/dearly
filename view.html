@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A little world made for someone who matters. Open your personal note, made just for you.">
+  <meta name="theme-color" content="#fff5f1">
+  <title>Dearly a little world, just for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link id="site-icon" rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%23c55763'/%3E%3Cpath d='M32 47S13 36 17 24c3-9 14-8 15 1 2-9 13-10 16-1 4 12-16 23-16 23Z' fill='%23fff6eb'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="view.css">
+</head>
+<body class="viewer-page" data-theme="rose">
+  <div class="float-layer" aria-hidden="true"><span>✦</span><span>♡</span><span>✳</span><span>✧</span><span>♡</span><span>✦</span></div>
+  <main id="viewer-root">
+    <section class="open-screen" id="open-screen">
+      <div class="open-card">
+        <span class="open-mark" aria-hidden="true">✳</span>
+        <p class="view-kicker" id="welcome-kicker">A LITTLE SURPRISE, MADE WITH LOVE</p>
+        <p class="open-for">FOR <span id="welcome-name">SOMEONE LOVELY</span></p>
+        <h1 id="welcome-title">A little world,<br><em>made just for you.</em></h1>
+        <p class="open-copy">Someone took a moment to make this just for you. No rush, take a breath, and open when you're ready.</p>
+        <button class="open-button" id="open-surprise">Open your surprise <span>♡</span></button>
+        <p class="open-signoff">a note from <b id="welcome-sender">someone who cares</b></p>
+      </div>
+    </section>
+
+    <div class="personal-site" id="personal-site" hidden>
+      <header class="view-nav"><a class="brand" href="index.html" aria-label="Dearly home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 25s-10-5.8-10-13a5.7 5.7 0 0 1 10-3.7A5.7 5.7 0 0 1 26 12c0 7.2-10 13-10 13Z" fill="currentColor"/></svg></span><span>dearly</span></a><span class="nav-dedication">A LITTLE WORLD, MADE JUST FOR YOU</span></header>
+      <section class="hero-section reveal-section" id="top">
+        <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+        <div class="hero-copy"><p class="view-kicker" id="hero-kicker">A SMALL TRIBUTE TO SOMEONE EXTRAORDINARY</p><p class="hero-recipient">FOR <span id="hero-name">YOU</span></p><h1 id="hero-headline">You make the world a little brighter.</h1><p class="hero-desc" id="hero-desc"></p><a href="#letter" class="hero-link">A note from the heart <span>↓</span></a></div>
+        <div class="hero-art"><div class="art-sun"></div><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><span class="art-flower flower-one">✿</span><span class="art-flower flower-two">✳</span><span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span><span class="art-stamp">JUST<br>FOR YOU</span><div class="hero-photo" id="hero-photo" hidden><img id="hero-photo-img" alt="A photo shared just for you"></div></div>
+      </section>
+      <section class="letter-section reveal-section" id="letter">
+        <div class="section-index"><span>01</span><i></i> A FEW WORDS FROM MY HEART</div>
+        <div class="letter-layout"><div class="letter-heading"><p class="view-kicker">NO BIG SPEECH, JUST THE TRUTH</p><h2 id="letter-title">You deserve to hear this.</h2><span class="letter-heart">♡</span></div><article class="letter-paper"><span class="paper-sprig">✳</span><p class="letter-dear" id="letter-dear">Dear friend,</p><p class="letter-copy" id="letter-copy"></p><div class="letter-end"><span>with all my heart,</span><b id="letter-sender">Your person</b></div></article></div>
+      </section>
+      <section class="keepsake-section reveal-section" id="keepsake" hidden>
+        <div class="keepsake-photo"><img id="keepsake-img" alt="A moment worth keeping"><span>ONE FOR THE KEEPS</span></div>
+        <div class="keepsake-copy"><p class="view-kicker">LITTLE PIECES OF OUR STORY</p><h2>Some things are too lovely to leave unsaid.</h2><p id="keepsake-note"></p><span class="keepsake-flourish">✧ &nbsp; ♡ &nbsp; ✧</span></div>
+      </section>
+      <section class="final-section reveal-section" id="last-note">
+        <div class="final-card"><span class="final-star">✹</span><p class="view-kicker">BEFORE YOU GO...</p><h2 id="final-title">One last thing, <span>friend</span>.</h2><p id="final-copy"></p><button class="last-message-button" id="last-message-button">Open one last message <span>↗</span></button><p class="last-message" id="last-message" hidden></p><div class="final-signature"><span>made especially for you,</span><b id="final-sender">with love ♡</b></div></div>
+      </section>
+<div class="view-footer"><span>✳ DEARLY, MADE WITH LOVE</span><a href="index.html">Create one for someone you love <span>↗</span></a></div>
+    </div>
+  </main>
+  <section class="invalid-card" id="invalid-card" hidden><span class="open-mark">✳</span><p class="view-kicker">THIS NOTE ISN'T HERE</p><h1>Looks like this link<br><em>lost a little piece.</em></h1><p>The card details may be incomplete or the link may have been changed. Ask the sender to share it again.</p><a class="open-button" href="index.html">Make a little note <span>↗</span></a></section>
+  <script src="viewer.js" defer></script>
+</body>
+</html>
